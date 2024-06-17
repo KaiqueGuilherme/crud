@@ -1,0 +1,14 @@
+.itens{
+    display: flex;
+justify-content: center;
+}
+.card{
+justify-content: center;
+width: 50%;
+border-radius: 0px;
+}
+
+.clas2{
+    align-items: center;
+    gap: 10px;
+}

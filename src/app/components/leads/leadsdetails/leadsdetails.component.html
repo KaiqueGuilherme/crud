@@ -1,0 +1,40 @@
+<br>
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="itens col-lg-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="container">
+            <br>
+            <h3>Atualiza Lead</h3>
+            <br>
+            <form #form="ngForm" (ngSubmit)="save()" >
+
+              <mdb-form-control class="mb-4">
+                <input mdbInput type="text" id="form1Example2" class="form-control" [(ngModel)]="lead.name_lead" name="name_lead" required/>
+                <label mdbLabel class="form-label" for="form1Example2">Nome</label>
+              </mdb-form-control>
+              <!-- Telefone -->
+              <mdb-form-control class="mb-4">
+                <input mdbInput type="text" id="form1Example3" class="form-control" [(ngModel)]="lead.number_lead" name="number_lead" required />
+                <label mdbLabel class="form-label" for="form1Example3">Telefone</label>
+              </mdb-form-control>
+              <!-- Plataforma -->
+              <mdb-form-control class="mb-4">
+                <input mdbInput type="text" id="form1Example6" class="form-control" [(ngModel)]="lead.plataform_lead.id_plataform" name="plataform_lead" required />
+                <label mdbLabel class="form-label" for="form1Example6">Plataforma</label>
+              </mdb-form-control>
+              <div class="row mb-4">
+                <div class="col-auto  d-flex alinharDireita clas2">
+                  <button mdbRipple type="button" class="btn btn-danger" (click)="cancel()">Cancelar</button>
+                  <button mdbRipple type="submit" class="btn btn-primary">Salvar </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

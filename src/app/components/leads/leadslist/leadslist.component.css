@@ -1,0 +1,110 @@
+.bt1 {
+    background-color: rgb(0, 139, 253);
+    width: 150px;
+    height: 35px;
+    border-color: rgb(2, 113, 211)  !important;
+    color: rgb(255, 255, 255);
+    box-shadow: none;
+  }
+
+.bt2{
+    background-color: rgb(226, 226, 226);
+    width: 150px;
+    height: 35px;
+    color: rgb(82, 82, 82);
+}  
+
+.clas2{
+    align-items: center;
+    gap: 10px;
+}
+.clas3{
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.card{
+border-radius: 0px !important;
+}
+
+/* Estilo básico para um botão */
+.button {
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: 1px solid #8c8c8c;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: white;
+  }
+  
+  .button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+  }
+  
+  .button:active {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+.buttonDois {
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #707070;
+    background-color: #dbdddf;
+    border: 1px solid #8c8c8c;
+    cursor: pointer;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  .buttonDois:hover {
+    background-color: #3e3f3f;
+    border-color: none;
+    color: white;
+  }
+  
+  .buttonDois:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+  }
+  
+  .buttonDois:active {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  table{
+    text-align: center;
+}
+
+.form-check-input{
+  display: flex;
+  align-items: center;
+  align-items: center;
+  border-radius: 0px !important; 
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 10px -12px inset, rgba(0, 0, 0, 0.3) 0px 10px 10px -18px inset !important;
+}
+
+ .buttonRel{
+  border: none;
+  background-color: white;
+}
+
+  .buttonRel::houver{
+  border: none;
+  color: #0056b3;
+}
+
+  .modal-content-custom {
+  border-radius: 0 !important;
+}

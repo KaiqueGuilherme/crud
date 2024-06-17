@@ -1,0 +1,102 @@
+<br>
+<div class="col-lg-13 justify-content-between align-items-center">
+</div>
+<div class="container">
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <h3>Leads Cadastrados</h3>
+            <br>
+            <div class="d-flex clas2">
+              <div class="col-auto">
+                <button type="button" class="button bt1" mdbRipple routerLink="/admin/lead/new">+ Incluir</button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="buttonDois bt2 d-flex clas3" mdbRipple (click)="alterarLeadSelecionado()">
+                  <i class="fas fa-pencil-alt"></i> Alterar
+                </button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="buttonDois bt2 d-flex clas3" mdbRipple (click)="deleteByid()">
+                  <i class="fas fa-trash-alt"></i> Deletar
+                </button>
+              </div>
+            </div>
+            <br>
+            <table class="table" border="1">
+              <thead>
+                <tr>
+                  <th scope="col">
+                    <input
+                      mdbCheckbox
+                      class="form-check-input"
+                      type="checkbox"
+                      id="selectAll"
+                      (change)="toggleAllCheckboxes($event)"
+                    />
+                  </th>
+                  <th scope="col">Identificação</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Telefone</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Data Cadastro</th>
+                  <th scope="col">Plataforma</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let user of leads; let i = index">
+                  <td>
+                    <input
+                      mdbCheckbox
+                      class="form-check-input"
+                      type="checkbox"
+                      [checked]="user.selected"
+                      (change)="checkboxChange(user.id_lead, $event)"
+                    />
+                  </td>
+                  <td>{{ user.id_lead }}</td>
+                  <td>{{ user.name_lead }}</td>
+                  <td>{{ user.number_lead }}</td>
+                  <td>{{ user.status_lead ? 'ativo' : 'inativo' }}</td>
+                  <td>{{ user.data_value | date: 'dd/MM/yyyy' }}</td>
+                  <td>{{ user.plataform_lead.name_plataform }}</td>
+                  <td><button class="buttonRel" (click)="details(user)"><i class="fas fa-file-alt"></i></button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #modalLeadDetail let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Informações Lead</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modalRef.close()"></button>
+  </div>
+  <div class="modal-body">
+    <div class="container">
+      <div class="row" *ngIf="leadModal">
+        <div class="col">
+          <p>Identificação: {{ leadModal.id_lead }}</p>
+          <hr>
+          <p>Nome: {{ leadModal.name_lead }}</p>
+          <hr>
+          <p>Telefone: {{ leadModal.number_lead }}</p>
+          <hr>
+          <p>Status: {{ leadModal.status_lead ? 'Ativo' : 'Inativo' }}</p>
+          <hr>
+          <p>Data Cadastro: {{ leadModal.data_value | date: 'dd/MM/yyyy' }}</p>
+          <hr>
+          <p>Plataforma: {{ leadModal.plataform_lead.name_plataform }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
